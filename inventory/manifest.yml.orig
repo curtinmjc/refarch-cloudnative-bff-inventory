@@ -3,8 +3,8 @@ applications:
   memory: 256M
   instances: 1
   domain: mybluemix.net
-  name: inventory-bff-app-curtinm
-  host: inventory-bff-app-curtinm
+  name: inventory-bff-app
+  host: inventory-bff-app
   disk_quota: 1024M
   services:
-  - cloudnative-autoscale-curtinm
+  - cloudnative-autoscale

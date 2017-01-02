@@ -1,8 +1,7 @@
 module.exports = function(app, request) {
 
 	var resJson = [];
-// MJC	var microserviceBaseUrl = "https://netflix-zuul-cloudnative-dev.mybluemix.net/inventory-microservice/micro";
-	var microserviceBaseUrl = "https://netflix-zuul-curtinm.mybluemix.net/inventory-microservice/micro";
+	var microserviceBaseUrl = "https://netflix-zuul-cloudnative-dev.mybluemix.net/inventory-microservice/micro";
 
 //	validation check
 	app.get('/api/items/validate',function(req, res){
@@ -45,11 +44,6 @@ module.exports = function(app, request) {
   		}
 		}, function (error, response, body) {
 
-// <MJC> added if block per exercise instructions to prevent error if missing input for JSON parsing
-			if (body.length === 0) {
-				body = "{}";
-			}
-// </MJC>
 			var bodyJson = JSON.parse(body);
 
 			if (!error && response.statusCode == 200) {
