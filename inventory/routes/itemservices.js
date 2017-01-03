@@ -25,9 +25,9 @@ module.exports = function(app, request) {
 			var bodyJson = JSON.parse(body);
 
 			if (!error && response.statusCode == 200) {
-// MJC revision to visually check on automated pipeline build & deploy
-//			return res.json(bodyJson);
-				return res.json("MJC addition for test of pipeline" + bodyJson);
+// MJC revision to visually check on automated pipeline build & deploy then return to prior version
+  			return res.json(bodyJson);
+// MJC test				return res.json("MJC addition for test of pipeline" + bodyJson);
 			}else {
 				return res.send({"error":error});
 			}
